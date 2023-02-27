@@ -6,7 +6,7 @@ const cellList = document.querySelectorAll('.cell')
 
 let game = [[null,null,null], [null,null,null], [null,null,null]]
 
-let playerTurn = 'X'
+// let playerTurn = 'X'
 
-let win = false
+// let win = false
 
