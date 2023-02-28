@@ -10,3 +10,13 @@ let playerTurn = 'X'
 
 let win = false
 
+const checkDraw = () => {
+  for (let i = 0; i < game.length; i++) {
+    for (let j = 0; j < game[i].length; j++) {
+      if (game[i][j] === null) {
+        return false
+      }
+    }
+  } 
+  return true
+}
