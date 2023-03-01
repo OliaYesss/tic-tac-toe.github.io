@@ -20,3 +20,19 @@ const checkDraw = () => {
   } 
   return true
 }
+
+const onCellClick = (event) => {
+  const cell = event.target
+  const dataset = event.target.dataset
+
+  if (win) {
+    return
+  }
+
+  if (cell.innerHTML === 'X' || cell.innerHTML === '0') {
+    return
+  }
+
+  console.log(dataset.i, dataset.j, game)
+}
+
