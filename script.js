@@ -33,6 +33,11 @@ const onCellClick = (event) => {
     return
   }
 
+  game[dataset.i][dataset.j] = playerTurn
+
+  cell.innerHTML = playerTurn
+
+
   console.log(dataset.i, dataset.j, game)
 }
 
