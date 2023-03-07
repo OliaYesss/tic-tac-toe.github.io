@@ -37,6 +37,8 @@ const onCellClick = (event) => {
 
   cell.innerHTML = playerTurn
 
+  cell.classList.add('cell-' + playerTurn)
+
 
   console.log(dataset.i, dataset.j, game)
 }
