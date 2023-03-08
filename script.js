@@ -39,6 +39,15 @@ const onCellClick = (event) => {
 
   cell.classList.add('cell-' + playerTurn)
 
+  const winOne = playerTurn === game[0][0] && playerTurn === game[1][1] && playerTurn === game[2][2]
+  const winTwo = playerTurn === game[2][0] && playerTurn === game[1][1] && playerTurn === game[0][2]
+  const winThree = playerTurn === game[0][0] && playerTurn === game[1][0] && playerTurn === game[2][0]
+  const winFour = playerTurn === game[0][1] && playerTurn === game[1][1] && playerTurn === game[2][1]
+  const winFive = playerTurn === game[0][2] && playerTurn === game[1][2] && playerTurn === game[2][2]
+  const winSix = playerTurn === game[0][0] && playerTurn === game[0][1] && playerTurn === game[0][2]
+  const winSeven = playerTurn === game[1][0] && playerTurn === game[1][1] && playerTurn === game[1][2]
+  const winEight = playerTurn === game[2][0] && playerTurn === game[2][1] && playerTurn === game[2][2]
+
 
   console.log(dataset.i, dataset.j, game)
 }
