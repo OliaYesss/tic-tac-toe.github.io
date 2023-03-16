@@ -72,23 +72,4 @@ const onCellClick = (event) => {
 }
 
 
-const onRestartBtnHide = () => {
-  restartBtn.classList.add('restart-btn-hide')
-  win = false
-  resultTextEl.innerHTML = 'Let\'s play!'
-
-  Array.from(cellList).forEach(cell => {
-    cell.innerHTML = ''
-    cell.classList.remove('cell-X')
-    cell.classList.remove('cell-0')
-  })
-
-  game = [[null,null,null], [null,null,null], [null,null,null]]
-}
-
-Array.from(cellList).forEach(cell => {
-  cell.onclick = onCellClick
-})
-
-restartBtn.onclick = onRestartBtnHide
 
