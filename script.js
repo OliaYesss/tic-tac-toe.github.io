@@ -72,4 +72,14 @@ const onCellClick = (event) => {
 }
 
 
+const onRestartBtnHide = () => {
+  restartBtn.classList.add('restart-btn-hide')
+  win = false
+  resultTextEl.innerHTML = 'Let\'s play!'
+
+
+}
+
+
+
 
