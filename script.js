@@ -77,7 +77,7 @@ const onRestartBtnHide = () => {
   win = false
   resultTextEl.innerHTML = 'Let\'s play!'
 
-console.log('it clicked')
+// console.log('it clicked')
 }
 
 
