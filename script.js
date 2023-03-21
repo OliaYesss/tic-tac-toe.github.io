@@ -77,7 +77,13 @@ const onRestartBtnHide = () => {
   win = false
   resultTextEl.innerHTML = 'Let\'s play!'
 
-// console.log('it clicked')
+  Array.from(cellList).forEach(cell => {
+    cell.innerHTML = ''
+    cell.classList.remove('cell-X')
+    cell.classList.remove('cell-0')
+  })
+
+  game = [[null,null,null], [null,null,null], [null,null,null]]
 }
 
 
