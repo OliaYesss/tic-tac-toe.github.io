@@ -86,6 +86,8 @@ const onRestartBtnHide = () => {
   game = [[null,null,null], [null,null,null], [null,null,null]]
 }
 
-
+Array.from(cellList).forEach(cell => {
+  cell.onclick = onCellClick
+})
 
 
