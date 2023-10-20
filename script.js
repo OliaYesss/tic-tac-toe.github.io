@@ -48,7 +48,47 @@ const onCellClick = (event) => {
   const winSeven = playerTurn === game[1][0] && playerTurn === game[1][1] && playerTurn === game[1][2]
   const winEight = playerTurn === game[2][0] && playerTurn === game[2][1] && playerTurn === game[2][2]
 
+  if (winOne || winTwo || winThree || winFour || winFive || winSix || winSeven || winEight) {
+    win = true
+    
+    resultTextEl.innerHTML = `<span class="cell-${playerTurn}">${playerTurn}</span> WINNER!`
+
+    restartBtn.classList.remove('restart-btn-hide')
+  }
+
+  if (!win && checkDraw()) {
+    resultTextEl.innerHTML = '<span class="cell-X">X</span><span class="cell-0">0</span> DRAW!'
+
+    restartBtn.classList.remove('restart-btn-hide')
+  } 
+
+  if (cell.innerHTML === 'X') {
+    playerTurn = '0'
+  } else {
+    playerTurn = 'X'
+  }
 
   console.log(dataset.i, dataset.j, game)
 }
+
+
+const onRestartBtnHide = () => {
+  restartBtn.classList.add('restart-btn-hide')
+  win = false
+  resultTextEl.innerHTML = 'Let\'s play!'
+
+  Array.from(cellList).forEach(cell => {
+    cell.innerHTML = ''
+    cell.classList.remove('cell-X')
+    cell.classList.remove('cell-0')
+  })
+
+  game = [[null,null,null], [null,null,null], [null,null,null]]
+}
+
+Array.from(cellList).forEach(cell => {
+  cell.onclick = onCellClick
+})
+
+restartBtn.onclick = onRestartBtnHide
 
